@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let storedRecommendations: [Recommendation] = fillWithExampleData()
+//        let contentView = FilterSelection()
         let contentView = RecommendationList(storedRecommendations: storedRecommendations)
 
         // Use a UIHostingController as window root view controller.

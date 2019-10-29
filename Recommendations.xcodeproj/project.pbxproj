@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E129007723674CA200E7014F /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129007623674CA200E7014F /* FilterSelectionView.swift */; };
 		E1EF5CAA236683BF003EB9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */; };
 		E1EF5CAC236683BF003EB9FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */; };
 		E1EF5CAE236683BF003EB9FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAD236683BF003EB9FD /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E129007623674CA200E7014F /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
 		E1EF5CA6236683BE003EB9FD /* Recommendations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recommendations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				E1EF5CC723668538003EB9FD /* DetailedItemView.swift */,
 				E1EF5CC323668431003EB9FD /* ModalViewObjects.swift */,
 				E1EF5CC523668457003EB9FD /* ImagePickerViewController.swift */,
+				E129007623674CA200E7014F /* FilterSelectionView.swift */,
 			);
 			path = Recommendations;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				E1EF5CC223668416003EB9FD /* NewItemView.swift in Sources */,
 				E1EF5CAA236683BF003EB9FD /* AppDelegate.swift in Sources */,
 				E1EF5CC623668457003EB9FD /* ImagePickerViewController.swift in Sources */,
+				E129007723674CA200E7014F /* FilterSelectionView.swift in Sources */,
 				E1EF5CAC236683BF003EB9FD /* SceneDelegate.swift in Sources */,
 				E1EF5CC023668400003EB9FD /* RecommendationRowView.swift in Sources */,
 				E1EF5CC823668538003EB9FD /* DetailedItemView.swift in Sources */,

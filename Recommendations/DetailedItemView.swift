@@ -33,6 +33,8 @@ struct DetailedView: View {
                     Spacer()
                         
                     }
+                        .padding(.top, 10)
+                        .padding(.bottom, 10)
                 }
                 Section {
                     Text(recommendationItem.title)

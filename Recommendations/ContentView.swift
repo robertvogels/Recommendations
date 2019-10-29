@@ -13,6 +13,8 @@ struct RecommendationList: View {
     @State var storedRecommendations: [Recommendation]
     @State var presentingAddSheet = false
     
+    @State var filteredCategory: String? = nil
+    
     var body: some View {
         
         NavigationView {
@@ -24,9 +26,13 @@ struct RecommendationList: View {
             }
             .navigationBarTitle("Recommendations")
             .padding(.all, 10)
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(
+                leading: NavigationLink(destination: FilterSelection(filteredCategory: $filteredCategory)) {
+                    Text("Filter")
+                },
+                trailing: Button(action: {
                 self.presentingAddSheet.toggle()
-            }, label: {
+                }, label: {
                 Text("Add")
                     .padding(.all, 9)
                     .font(.system(size:15))

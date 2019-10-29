@@ -23,7 +23,7 @@ struct Recommendation: Identifiable {
 }
 
 func getCategoryCollection() -> [String] {
-    return ["Movie/series", "Music", "Book", "Restaurant", "Place", "Event", "Games", "Other"].sorted()
+    return ["Movie/series", "Music", "Book", "Restaurant", "Place", "Event", "Game", "Other"].sorted()
 }
 
 func getNoImageSelected() -> UIImage {
@@ -37,7 +37,7 @@ func fillWithExampleData() -> [Recommendation] {
         .init(title: "Savarijn", category: "restaurant", recommendedBy: "Marla", note: "franse keuken, niet al te duur", img: Image(uiImage: getNoImageSelected())),
         .init(title:"The Matrix", category:"movie", recommendedBy:"Gil", note:"science-fiction met filosofische inslag uit de jaren 90", img: Image(uiImage: #imageLiteral(resourceName: "matrix"))),
         .init(title:"Once Upon a Time in the West", category:"movie", recommendedBy:"Gil", note:"epische westernfilm van Italiaanse bodem, klassieker", img: Image(uiImage: #imageLiteral(resourceName: "onceupon"))),
-        .init(title: "The Picture of Dorian Gray", category: "book", recommendedBy: "Robert", note: "coming of age verhaal van iemand in de Britse sociale eliten", img: Image(uiImage: getNoImageSelected()))]
+        .init(title: "The Picture of Dorian Gray", category: "book", recommendedBy: "Robert", note: "coming of age verhaal van iemand in de Britse sociale elite", img: Image(uiImage: getNoImageSelected()))]
     
     return exampleData
     
