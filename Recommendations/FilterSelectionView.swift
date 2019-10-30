@@ -17,23 +17,27 @@ struct FilterSelection: View {
     @Binding var filteredCategory: String?
     @Environment(\.presentationMode) var presentation
     
+    private func dismissEnvironment() -> () {
+        self.presentation.wrappedValue.dismiss()
+    }
+    
     var body: some View {
         
         Form {
-            
-            ForEach(0 ..< self.cats.count) { item in
-                
+            Section {
                 Button(action: {
-
-                    print("select")
-                    self.filteredCategory = self.cats[item]
-                    
- //                   self.setFilterCategory(self.cats[item])
-
-                }, label: { Text(self.cats[item]).foregroundColor( .white) } )
-                
+                    self.filteredCategory = nil
+                    self.dismissEnvironment()
+                }, label: {Text("No filter").foregroundColor(.red)})
             }
-
+            Section {
+                ForEach(0 ..< self.cats.count) { item in
+                    Button(action: {
+                        self.filteredCategory = self.cats[item]
+                        self.dismissEnvironment()
+                    }, label: { Text(self.cats[item]).foregroundColor(.white) } )
+                }
+            }
         }
         
     }

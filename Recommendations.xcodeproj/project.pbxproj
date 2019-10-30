@@ -70,6 +70,7 @@
 		E1EF5CA8236683BE003EB9FD /* Recommendations */ = {
 			isa = PBXGroup;
 			children = (
+				E1EF5CBD236683D3003EB9FD /* Models.swift */,
 				E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */,
 				E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */,
 				E1EF5CAD236683BF003EB9FD /* ContentView.swift */,
@@ -77,7 +78,6 @@
 				E1EF5CB4236683C0003EB9FD /* LaunchScreen.storyboard */,
 				E1EF5CB7236683C0003EB9FD /* Info.plist */,
 				E1EF5CB1236683C0003EB9FD /* Preview Content */,
-				E1EF5CBD236683D3003EB9FD /* Models.swift */,
 				E1EF5CBF23668400003EB9FD /* RecommendationRowView.swift */,
 				E1EF5CC123668416003EB9FD /* NewItemView.swift */,
 				E1EF5CC723668538003EB9FD /* DetailedItemView.swift */,

@@ -15,13 +15,28 @@ struct RecommendationList: View {
     
     @State var filteredCategory: String? = nil
     
+//    func populateRows(recommendationItem: Recommendation) -> (NavigationView) {
+//        let view = NavigationLink(destination: DetailedView(recommendationItem: recommendationItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
+//                RecommendationRow(recommendation: recommendationItem) }
+//        return view
+//    }
+    
     var body: some View {
         
         NavigationView {
             
-            List(storedRecommendations) { recommendation in
-                NavigationLink(destination: DetailedView(recommendationItem: recommendation, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})}))
-                { RecommendationRow(recommendation: recommendation)
+            List {
+                ForEach(storedRecommendations) { recItem in
+                    if self.filteredCategory == nil {
+                        NavigationLink(destination: DetailedView(recommendationItem: recItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
+                            RecommendationRow(recommendation: recItem) }
+                    } else {
+                        if recItem.category == self.filteredCategory {
+                            NavigationLink(destination: DetailedView(recommendationItem: recItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
+                                RecommendationRow(recommendation: recItem)
+                            }
+                        }
+                    }
                 }
             }
             .navigationBarTitle("Recommendations")
