@@ -15,12 +15,6 @@ struct RecommendationList: View {
     
     @State var filteredCategory: String? = nil
     
-//    func populateRows(recommendationItem: Recommendation) -> (NavigationView) {
-//        let view = NavigationLink(destination: DetailedView(recommendationItem: recommendationItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
-//                RecommendationRow(recommendation: recommendationItem) }
-//        return view
-//    }
-    
     var body: some View {
         
         NavigationView {

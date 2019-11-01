@@ -13,7 +13,6 @@ struct FilterSelection: View {
     
     let cats: [String] = getCategoryCollection()
     
- //   var setFilterCategory: (String) -> ()
     @Binding var filteredCategory: String?
     @Environment(\.presentationMode) var presentation
     

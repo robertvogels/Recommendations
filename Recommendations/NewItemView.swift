@@ -14,7 +14,8 @@ struct NewItemView: View {
     @Binding var isPresentedNewItem: Bool
     
     @State var isPrestenedCamera: Bool = false
-    @State var image: Image? = nil
+    @State var image: UIImage? = nil
+    @State var imageView: Image? = nil
     
     @State var newTitle: String = ""
     @State var newNote: String = ""
@@ -49,7 +50,8 @@ struct NewItemView: View {
                         Button(action: {self.isPrestenedCamera = true}, label: {Text("Add photo")})
                     }
                     Section {
-                        image?.resizable()
+                        imageView?
+                            .resizable()
                             .aspectRatio(contentMode: .fit)
                     }.frame(height: 250, alignment: .center)
                     
@@ -62,11 +64,13 @@ struct NewItemView: View {
                     }, label: {Text("Cancel")}), trailing: Button(action: {
                         if self.newTitle.isEmpty {
                         } else {
-                            self.addRecommendation(Recommendation.init(title: self.newTitle, category: self.categoryCollection[self.selectedCategory], recommendedBy:self.newRecommendedBy, note:self.newNote, img: self.image ?? Image(uiImage: getNoImageSelected())))
+                            let newimage = Image(uiImage: self.image ?? UIImage(imageLiteralResourceName: "infoSymbol"))
+                            self.addRecommendation(Recommendation.init(title: self.newTitle, category: self.categoryCollection[self.selectedCategory], recommendedBy:self.newRecommendedBy, note:self.newNote, img: newimage))
                             self.isPresentedNewItem = false
                         }
                     }, label: {Text("Add").fontWeight(.bold)}))
-                .sheet(isPresented: self.$isPrestenedCamera, content: { ImageCaptureView(showImagePicker: self.$isPrestenedCamera, image: self.$image) })
+                .sheet(isPresented: self.$isPrestenedCamera, content: { ImageCaptureView(showImagePicker: self.$isPrestenedCamera, image: self.$image, imageView: self.$imageView)
+                })
         }
     }
 }
