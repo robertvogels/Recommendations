@@ -17,7 +17,7 @@ struct RecommendationRow: View {
         
         HStack {
             
-            recommendation.img
+            Image(uiImage: recommendation.img)
             .resizable()
                 .frame(width: 60, height: 60)
                 .scaledToFit()

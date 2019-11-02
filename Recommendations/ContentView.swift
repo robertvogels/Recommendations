@@ -54,6 +54,7 @@ struct RecommendationList: View {
                         item in
                         
                         self.storedRecommendations.append(item)
+                        saveToJSON(recItems: self.storedRecommendations)
                     })
                 })
             

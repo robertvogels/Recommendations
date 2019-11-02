@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E129007723674CA200E7014F /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129007623674CA200E7014F /* FilterSelectionView.swift */; };
+		E152F067236C6ED800B0F5DF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152F066236C6ED800B0F5DF /* Data.swift */; };
 		E1EF5CAA236683BF003EB9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */; };
 		E1EF5CAC236683BF003EB9FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */; };
 		E1EF5CAE236683BF003EB9FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAD236683BF003EB9FD /* ContentView.swift */; };
@@ -20,10 +21,12 @@
 		E1EF5CC423668431003EB9FD /* ModalViewObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CC323668431003EB9FD /* ModalViewObjects.swift */; };
 		E1EF5CC623668457003EB9FD /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CC523668457003EB9FD /* ImagePickerViewController.swift */; };
 		E1EF5CC823668538003EB9FD /* DetailedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CC723668538003EB9FD /* DetailedItemView.swift */; };
+		E1F6F692236C85A3002DA8F7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6F691236C85A3002DA8F7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E129007623674CA200E7014F /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
+		E152F066236C6ED800B0F5DF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E1EF5CA6236683BE003EB9FD /* Recommendations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recommendations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		E1EF5CC323668431003EB9FD /* ModalViewObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewObjects.swift; sourceTree = "<group>"; };
 		E1EF5CC523668457003EB9FD /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		E1EF5CC723668538003EB9FD /* DetailedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedItemView.swift; sourceTree = "<group>"; };
+		E1F6F691236C85A3002DA8F7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E152F065236C6EBF00B0F5DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E152F066236C6ED800B0F5DF /* Data.swift */,
+				E1EF5CBD236683D3003EB9FD /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E1EF5C9D236683BE003EB9FD = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +83,8 @@
 		E1EF5CA8236683BE003EB9FD /* Recommendations */ = {
 			isa = PBXGroup;
 			children = (
-				E1EF5CBD236683D3003EB9FD /* Models.swift */,
+				E1F6F690236C8583002DA8F7 /* Extensions */,
+				E152F065236C6EBF00B0F5DF /* Models */,
 				E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */,
 				E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */,
 				E1EF5CAD236683BF003EB9FD /* ContentView.swift */,
@@ -94,6 +108,14 @@
 				E1EF5CB2236683C0003EB9FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1F6F690236C8583002DA8F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6F691236C85A3002DA8F7 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +193,10 @@
 				E1EF5CAA236683BF003EB9FD /* AppDelegate.swift in Sources */,
 				E1EF5CC623668457003EB9FD /* ImagePickerViewController.swift in Sources */,
 				E129007723674CA200E7014F /* FilterSelectionView.swift in Sources */,
+				E152F067236C6ED800B0F5DF /* Data.swift in Sources */,
 				E1EF5CAC236683BF003EB9FD /* SceneDelegate.swift in Sources */,
 				E1EF5CC023668400003EB9FD /* RecommendationRowView.swift in Sources */,
+				E1F6F692236C85A3002DA8F7 /* Extensions.swift in Sources */,
 				E1EF5CC823668538003EB9FD /* DetailedItemView.swift in Sources */,
 				E1EF5CAE236683BF003EB9FD /* ContentView.swift in Sources */,
 				E1EF5CC423668431003EB9FD /* ModalViewObjects.swift in Sources */,

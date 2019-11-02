@@ -64,8 +64,8 @@ struct NewItemView: View {
                     }, label: {Text("Cancel")}), trailing: Button(action: {
                         if self.newTitle.isEmpty {
                         } else {
-                            let newimage = Image(uiImage: self.image ?? UIImage(imageLiteralResourceName: "infoSymbol"))
-                            self.addRecommendation(Recommendation.init(title: self.newTitle, category: self.categoryCollection[self.selectedCategory], recommendedBy:self.newRecommendedBy, note:self.newNote, img: newimage))
+//                            let newimage = Image(uiImage: self.image ?? UIImage(imageLiteralResourceName: "infoSymbol"))
+                            self.addRecommendation(Recommendation.init(title: self.newTitle, category: self.categoryCollection[self.selectedCategory], recommendedBy:self.newRecommendedBy, note:self.newNote, img: self.image ?? UIImage()))
                             self.isPresentedNewItem = false
                         }
                     }, label: {Text("Add").fontWeight(.bold)}))

@@ -26,7 +26,7 @@ struct DetailedView: View {
                     HStack {
                         
                     Spacer()
-                    recommendationItem.img
+                        Image(uiImage: recommendationItem.img)
                         .resizable()
                         .frame(width: 225, height: 225)
                         .scaledToFit()
