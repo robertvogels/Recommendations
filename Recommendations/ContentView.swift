@@ -12,7 +12,6 @@ struct RecommendationList: View {
     
     @State var storedRecommendations: [Recommendation]
     @State var presentingAddSheet = false
-    
     @State var filteredCategory: String? = nil
     
     var body: some View {
@@ -21,16 +20,12 @@ struct RecommendationList: View {
             
             List {
                 ForEach(storedRecommendations) { recItem in
-                    if self.filteredCategory == nil {
-                        NavigationLink(destination: DetailedView(recommendationItem: recItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
-                            RecommendationRow(recommendation: recItem) }
-                    } else {
-                        if recItem.category == self.filteredCategory {
-                            NavigationLink(destination: DetailedView(recommendationItem: recItem, deleteRecommendation: { item in self.storedRecommendations.removeAll(where: {$0.id == item.id})})) {
-                                RecommendationRow(recommendation: recItem)
-                            }
-                        }
-                    }
+                    if (self.filteredCategory == nil) || (recItem.category == self.filteredCategory) {
+                        NavigationLink(destination: DetailedView(recommendationItem: recItem, deleteRecommendation: { item in
+                            self.storedRecommendations.removeAll(where: {$0.id == item.id})
+                            saveToJSON(recItems: self.storedRecommendations)
+                        })) { RecommendationRow(recommendation: recItem) }
+                    } 
                 }
             }
             .navigationBarTitle("Recommendations")
@@ -49,16 +44,14 @@ struct RecommendationList: View {
                     .background(Color.green)
                     .cornerRadius(4)
             }))
-                .sheet(isPresented: $presentingAddSheet, content: {
-                    NewItemView(isPresentedNewItem: self.$presentingAddSheet, addRecommendation: {
-                        item in
-                        
-                        self.storedRecommendations.append(item)
-                        saveToJSON(recItems: self.storedRecommendations)
-                    })
+            .sheet(isPresented: $presentingAddSheet, content: { NewItemView(isPresentedNewItem: self.$presentingAddSheet, addRecommendation: { item in
+                self.storedRecommendations.append(item)
+                saveToJSON(recItems: self.storedRecommendations)
                 })
+            })
             
         }
         
     }
+    
 }

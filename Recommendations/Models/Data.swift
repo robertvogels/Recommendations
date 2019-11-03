@@ -82,7 +82,3 @@ func getDocumentUrl() -> URL {
     return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) [0] .appendingPathComponent("data.json")
 }
 
-func displayFileContents() {
-    let data = try! String(contentsOf: getDocumentUrl())
-    print(data)
-}
