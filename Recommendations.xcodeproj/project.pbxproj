@@ -11,7 +11,7 @@
 		E152F067236C6ED800B0F5DF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152F066236C6ED800B0F5DF /* Data.swift */; };
 		E1EF5CAA236683BF003EB9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */; };
 		E1EF5CAC236683BF003EB9FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */; };
-		E1EF5CAE236683BF003EB9FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAD236683BF003EB9FD /* ContentView.swift */; };
+		E1EF5CAE236683BF003EB9FD /* RecommendationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF5CAD236683BF003EB9FD /* RecommendationListView.swift */; };
 		E1EF5CB0236683C0003EB9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1EF5CAF236683C0003EB9FD /* Assets.xcassets */; };
 		E1EF5CB3236683C0003EB9FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1EF5CB2236683C0003EB9FD /* Preview Assets.xcassets */; };
 		E1EF5CB6236683C0003EB9FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EF5CB4236683C0003EB9FD /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		E1EF5CA6236683BE003EB9FD /* Recommendations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recommendations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1EF5CAD236683BF003EB9FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E1EF5CAD236683BF003EB9FD /* RecommendationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationListView.swift; sourceTree = "<group>"; };
 		E1EF5CAF236683C0003EB9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1EF5CB2236683C0003EB9FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1EF5CB5236683C0003EB9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,21 +83,15 @@
 		E1EF5CA8236683BE003EB9FD /* Recommendations */ = {
 			isa = PBXGroup;
 			children = (
+				E1F3BBB6236F313B00A3870B /* Views */,
 				E1F6F690236C8583002DA8F7 /* Extensions */,
 				E152F065236C6EBF00B0F5DF /* Models */,
 				E1EF5CA9236683BF003EB9FD /* AppDelegate.swift */,
 				E1EF5CAB236683BF003EB9FD /* SceneDelegate.swift */,
-				E1EF5CAD236683BF003EB9FD /* ContentView.swift */,
 				E1EF5CAF236683C0003EB9FD /* Assets.xcassets */,
 				E1EF5CB4236683C0003EB9FD /* LaunchScreen.storyboard */,
 				E1EF5CB7236683C0003EB9FD /* Info.plist */,
 				E1EF5CB1236683C0003EB9FD /* Preview Content */,
-				E1EF5CBF23668400003EB9FD /* RecommendationRowView.swift */,
-				E1EF5CC123668416003EB9FD /* NewItemView.swift */,
-				E1EF5CC723668538003EB9FD /* DetailedItemView.swift */,
-				E1EF5CC323668431003EB9FD /* ModalViewObjects.swift */,
-				E1EF5CC523668457003EB9FD /* ImagePickerViewController.swift */,
-				E129007623674CA200E7014F /* FilterSelectionView.swift */,
 			);
 			path = Recommendations;
 			sourceTree = "<group>";
@@ -108,6 +102,20 @@
 				E1EF5CB2236683C0003EB9FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1F3BBB6236F313B00A3870B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1EF5CAD236683BF003EB9FD /* RecommendationListView.swift */,
+				E1EF5CBF23668400003EB9FD /* RecommendationRowView.swift */,
+				E1EF5CC123668416003EB9FD /* NewItemView.swift */,
+				E1EF5CC723668538003EB9FD /* DetailedItemView.swift */,
+				E1EF5CC323668431003EB9FD /* ModalViewObjects.swift */,
+				E1EF5CC523668457003EB9FD /* ImagePickerViewController.swift */,
+				E129007623674CA200E7014F /* FilterSelectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E1F6F690236C8583002DA8F7 /* Extensions */ = {
@@ -198,7 +206,7 @@
 				E1EF5CC023668400003EB9FD /* RecommendationRowView.swift in Sources */,
 				E1F6F692236C85A3002DA8F7 /* Extensions.swift in Sources */,
 				E1EF5CC823668538003EB9FD /* DetailedItemView.swift in Sources */,
-				E1EF5CAE236683BF003EB9FD /* ContentView.swift in Sources */,
+				E1EF5CAE236683BF003EB9FD /* RecommendationListView.swift in Sources */,
 				E1EF5CC423668431003EB9FD /* ModalViewObjects.swift in Sources */,
 				E1EF5CBE236683D3003EB9FD /* Models.swift in Sources */,
 			);

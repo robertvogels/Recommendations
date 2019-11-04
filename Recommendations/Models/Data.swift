@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-let data: [Recommendation] = []
+let dataFileName = "json.data"
 
 func loadJSON() -> [Recommendation] {
     
@@ -29,7 +29,7 @@ func loadJSON() -> [Recommendation] {
         let decoder = JSONDecoder()
         unModeledData = try decoder.decode([RecommendationReadyForJSON].self, from: Data(jsonData))
     } catch {
-        print("No decode possible")
+        print("Error while decoding the .json file")
         return []
     }
     
@@ -73,12 +73,9 @@ func convertDataFromJSONReady(recItemsJSON: [RecommendationReadyForJSON]) -> [Re
     return output
 }
 
-func getDocumentsDirectory() -> URL? {
-    let paths = Bundle.main.url(forResource: "data.json", withExtension: nil)
-    return paths
-}
-
 func getDocumentUrl() -> URL {
-    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) [0] .appendingPathComponent("data.json")
+    
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) [0] .appendingPathComponent(dataFileName)
+    
 }
 

@@ -11,8 +11,7 @@ import SwiftUI
 
 struct FilterSelection: View {
     
-    let cats: [String] = getCategoryCollection()
-    
+    let cats: [String] = getCategoryOptions()
     @Binding var filteredCategory: String?
     @Environment(\.presentationMode) var presentation
     
@@ -30,6 +29,13 @@ struct FilterSelection: View {
                 }, label: {Text("No filter").foregroundColor(.red)})
             }
             Section {
+//                for item in Category.allCases {
+//                    Button(action: {
+//                        self.filteredCategory = self.cats[item]
+//                        self.dismissEnvironment()
+//                    }, label: { Text(self.cats[item]).foregroundColor(.white) } )
+//                }
+                
                 ForEach(0 ..< self.cats.count) { item in
                     Button(action: {
                         self.filteredCategory = self.cats[item]
@@ -42,3 +48,5 @@ struct FilterSelection: View {
     }
     
 }
+
+

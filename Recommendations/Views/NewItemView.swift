@@ -23,7 +23,7 @@ struct NewItemView: View {
     
     var addRecommendation: (Recommendation) -> ()
     
-    let categoryCollection = getCategoryCollection()
+    let categoryCollection: [String] = getCategoryOptions()
     @State private var selectedCategory = 0
     
     var body: some View {
