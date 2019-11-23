@@ -36,6 +36,7 @@ struct RecommendationReadyForJSON: Identifiable, Codable {
 enum Category: String, CaseIterable, Hashable, Codable {
     case movies = "Movies"
     case books = "Books"
+    case music = "Music"
     case events = "Events"
     case games = "Games"
     case places = "Places"

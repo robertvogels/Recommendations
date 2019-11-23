@@ -41,8 +41,8 @@ struct NewItemView: View {
                     }
                     Section {
                         Picker(selection: $selectedCategory, label: Text("Category").font(.headline)) {
-                            ForEach(0 ..< self.categoryCollection.count) {
-                                Text(self.categoryCollection[$0])
+                            ForEach(self.categoryCollection, id: \.self) { item in
+                                Text(item)
                             }
                         }.padding(.horizontal, 8)
                     }
