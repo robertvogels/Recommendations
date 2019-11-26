@@ -26,3 +26,20 @@ struct AnnotatedTextField: View {
     }
     
 }
+
+struct FilterViewIndicationOn: View {
+    
+    let selectedFilter: String
+    
+    var body: some View {
+        
+        Text(selectedFilter)
+            .padding(.all, 9)
+            .font(.system(size:15))
+            .background(Color.blue)
+            .cornerRadius(4.0)
+            .foregroundColor(Color.white)
+
+        
+    }
+}

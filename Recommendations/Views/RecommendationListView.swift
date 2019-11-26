@@ -32,7 +32,10 @@ struct RecommendationList: View {
             .padding(.all, 10)
             .navigationBarItems(
                 leading: NavigationLink(destination: FilterSelection(filteredCategory: $filteredCategory)) {
-                    Text("Filter")
+                    if filteredCategory != nil {
+                        FilterViewIndicationOn(selectedFilter: filteredCategory!)
+                    } else {
+                        Text("Filter") }
                 },
                 trailing: Button(action: {
                 self.presentingAddSheet.toggle()

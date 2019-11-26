@@ -62,6 +62,6 @@ func getNoImageSelected() -> UIImage {
 }
 
 func fillWithExampleData() -> [Recommendation] {
-    let exampleData: [Recommendation] = [.init(title: "Pulp Fiction", category: "Movie/series", recommendedBy: "Bart", note: "my note", img: UIImage(imageLiteralResourceName: "pf"))]
+    let exampleData: [Recommendation] = [.init(title: "Pulp Fiction", category: "Movies", recommendedBy: "Bart", note: "geweldadige film uit jaren 90, meesterwerk", img: UIImage(imageLiteralResourceName: "pf"))]
     return exampleData
 }

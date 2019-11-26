@@ -22,7 +22,7 @@ func loadJSON() -> [Recommendation] {
         jsonData = try Data(contentsOf: file)
     } catch {
         print("There is no data file. Couldn't fetch data from .json file")
-        return []
+        return fillWithExampleData()
     }
     
     do {

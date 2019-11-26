@@ -41,8 +41,8 @@ struct NewItemView: View {
                     }
                     Section {
                         Picker(selection: $selectedCategory, label: Text("Category").font(.headline)) {
-                            ForEach(self.categoryCollection, id: \.self) { item in
-                                Text(item)
+                            ForEach(0..<self.categoryCollection.count, id: \.self) { item in
+                                Text(self.categoryCollection[item])
                             }
                         }.padding(.horizontal, 8)
                     }
@@ -64,7 +64,6 @@ struct NewItemView: View {
                     }, label: {Text("Cancel")}), trailing: Button(action: {
                         if self.newTitle.isEmpty {
                         } else {
-//                            let newimage = Image(uiImage: self.image ?? UIImage(imageLiteralResourceName: "infoSymbol"))
                             self.addRecommendation(Recommendation.init(title: self.newTitle, category: self.categoryCollection[self.selectedCategory], recommendedBy:self.newRecommendedBy, note:self.newNote, img: self.image ?? UIImage()))
                             self.isPresentedNewItem = false
                         }
